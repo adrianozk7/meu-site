@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página do Participante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #005fa3;
+    }
+    #formulario {
+      display: none;
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Página do Participante</h1>
+  </header>
+
+  <div class="container" id="tela-inicial">
+    <h2>Bem-vindo(a)!</h2>
+    <p>Aqui você acessa suas informações pessoais, inscrição, cartão de confirmação, notas e muito mais.</p>
+    <button class="btn" onclick="mostrarFormulario()">Entrar com Gov.br</button>
+  </div>
+
+  <div class="container" id="formulario">
+    <h2>Cadastro do Participante</h2>
+    <form>
+      <label>Nome completo:</label>
+      <input type="text" required>
+
+      <label>CPF:</label>
+      <input type="text" required>
+
+      <label>Data de nascimento:</label>
+      <input type="date" required>
+
+      <label>Nome da mãe:</label>
+      <input type="text" required>
+
+      <label>Sexo:</label>
+      <select required>
+        <option value="">Selecione</option>
+        <option>Masculino</option>
+        <option>Feminino</option>
+        <option>Outro</option>
+        <option>Prefiro não responder</option>
+      </select>
+
+      <label>Estado civil:</label>
+      <select required>
+        <option value="">Selecione</option>
+        <option>Solteiro(a)</option>
+        <option>Casado(a)</option>
+        <option>Divorciado(a)</option>
+        <option>Viúvo(a)</option>
+      </select>
+
+      <label>Cor/raça:</label>
+      <select required>
+        <option value="">Selecione</option>
+        <option>Branca</option>
+        <option>Preta</option>
+        <option>Parda</option>
+        <option>Amarela</option>
+        <option>Indígena</option>
+      </select>
+
+      <label>Possui necessidades especiais?</label>
+      <select required>
+        <option value="">Selecione</option>
+        <option>Não</option>
+        <option>Sim</option>
+      </select>
+
+      <label>Escolaridade:</label>
+      <select required>
+        <option value="">Selecione</option>
+        <option>Ensino médio completo</option>
+        <option>Ensino médio em andamento</option>
+        <option>Ensino fundamental completo</option>
+        <option>Outro</option>
+      </select>
+
+      <label>Endereço completo:</label>
+      <input type="text" required>
+
+      <label>Telefone:</label>
+      <input type="tel" required>
+
+      <label>E-mail:</label>
+      <input type="email" required>
+
+      <label>Senha:</label>
+      <input type="password" required>
+
+      <label>Confirmar senha:</label>
+      <input type="password" required>
+
+      <button type="submit" class="btn">Finalizar Cadastro</button>
+    </form>
+  </div>
+
+  <script>
+    function mostrarFormulario() {
+      document.getElementById('tela-inicial').style.display = 'none';
+      document.getElementById('formulario').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
